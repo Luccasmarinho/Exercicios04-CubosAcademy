@@ -40,7 +40,10 @@ let numero = 0;
 const {capitulos} = livro
 
 for (let i = 0; i < capitulos.length; i++) {
-    capitulos[i].numero = i + 1
+    livro.capitulos[i] = {
+        numero: i + 1,
+        ...livro.capitulos[i]
+    }
 }
 console.log(livro);
 
